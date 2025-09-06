@@ -1,0 +1,11 @@
+services:
+  llama-server:
+    build:
+      context: .
+    image: frt/llama
+    container_name: llama
+    shm_size: '128g'
+    mem_limit: '110g'
+    ports:
+      - 127.0.0.1:18080:18080
+    gpus: all
