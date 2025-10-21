@@ -6,6 +6,8 @@ services:
     container_name: llama
     shm_size: '128g'
     mem_limit: '110g'
+    volumes:
+      - ./data:/mnt
     ports:
       - 18080:18080
     gpus: all
